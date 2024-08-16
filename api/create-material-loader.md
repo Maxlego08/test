@@ -2,11 +2,11 @@
 icon: drone
 ---
 
-# Create Material Loader
+# 创建材质加载器
 
-You can create your own [MaterialLoader](https://javadocs.groupez.dev/zmenu/fr/maxlego08/menu/api/loader/MaterialLoader.html). A material loader will allow you to create an ItemStack from the configuration.
+你可以创建你自己的 [MaterialLoader](https://javadocs.groupez.dev/zmenu/fr/maxlego08/menu/api/loader/MaterialLoader.html)。材质加载器允许你根据配置创建一个 `ItemStack` 对象。
 
-Example with HeadDatabase:
+使用 HeadDatabase 的示例：
 
 ```java
 package fr.maxlego08.menu.loader.materials;

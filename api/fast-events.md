@@ -2,19 +2,17 @@
 icon: gauge-max
 ---
 
-# Fast Events
+# 快速事件
 
-In the default configuration, you have FastEvents enabled by default. Instead of using the bukkit API for events, you can save an interface named FastEvent with methods for each plugin event. Or you can disable this option in config.json and use bukkit events normally.
+在默认配置中，FastEvents 是默认启用的。你可以使用名为 `FastEvent` 的接口，其中包含每个插件事件的方法，而不是使用 Bukkit API 的事件。或者，你可以在 `config.json` 中禁用此选项，并正常使用 Bukkit 事件。
 
-
-
-## Register FastEvent
+## 注册 FastEvent
 
 ```java
-inventoryManager.registerFastEvent(plugin, youFastEventClass)
+inventoryManager.registerFastEvent(plugin, yourFastEventClass)
 ```
 
-Example:
+示例：
 
 ```java
 import fr.maxlego08.menu.api.InventoryManager;

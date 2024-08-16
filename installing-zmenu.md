@@ -1,9 +1,9 @@
-# 🔌 Installing zMenu
+# 🔌 安装 zMenu
 
-## Download zMenu
+## 下载 zMenu
 
 {% hint style="info" %}
-To access additional functionality and support the project, consider purchasing [zMenu+](https://www.spigotmc.org/resources/zmenu-premium-zmenu-addon.115533/).
+为了获取更多功能并支持项目开发，请考虑购买 [zMenu+](https://www.spigotmc.org/resources/zmenu-premium-zmenu-addon.115533/)。
 {% endhint %}
 
 * Spigot: [https://www.spigotmc.org/resources/110402/](https://www.spigotmc.org/resources/zmenu-ultra-complete-menu-plugin.110402/)
@@ -11,21 +11,21 @@ To access additional functionality and support the project, consider purchasing 
 * Minecaft Inventory Builder: [https://minecraft-inventory-builder.com/resources/1](https://minecraft-inventory-builder.com/resources/zmenu-ultra-complete-menu-plugin.1)
 * BuiltsBuyBit: [https://builtbybit.com/resources/29353/](https://builtbybit.com/resources/zmenu-ultra-complete-menu-plugin.29353/)
 
-## Requirements <a href="#requirements" id="requirements"></a>
+## 系统要求 <a href="#requirements" id="requirements"></a>
 
-* **Java version**: 8 or newer
-* **Server version**: 1.20.4 / **1.20.6** / **1.21** / **1.21.1**
-* **Server SoftWare**: <mark style="color:orange;">Spigot</mark>, <mark style="color:green;">Paper</mark>, <mark style="color:green;">Folia</mark>, <mark style="color:green;">Pufferfish</mark>, <mark style="color:green;">Purpur</mark>, <mark style="color:green;">UniversSpigot</mark> _(all forks based on paper will work)_
-* [**PlaceholderAPI**](https://www.spigotmc.org/resources/placeholderapi.6245/) <mark style="color:yellow;">**RECOMMANDED**</mark> (Folia version [here](https://github.com/Anon8281/PlaceholderAPI/releases/tag/1.1))
-* [**Vault**](https://www.spigotmc.org/resources/vault.34315/) <mark style="color:yellow;">**RECOMMANDED**</mark> (Folia version [here](https://github.com/Geolykt/Vault/releases))
-* [**zMenu+**](configurations/patterns.md) <mark style="color:yellow;">**RECOMMANDED**</mark>
+* **Java 版本**: 8 或更高
+* **服务器版本**: 1.20.4 / **1.20.6** / **1.21** / **1.21.1**
+* **服务器软件**: <mark style="color:orange;">Spigot</mark>, <mark style="color:green;">Paper</mark>, <mark style="color:green;">Folia</mark>, <mark style="color:green;">Pufferfish</mark>, <mark style="color:green;">Purpur</mark>, <mark style="color:green;">UniversSpigot</mark> _(所有基于 Paper 的分支都兼容)_
+* [**PlaceholderAPI**](https://www.spigotmc.org/resources/placeholderapi.6245/) <mark style="color:yellow;">**推荐**</mark> (Folia 版本 [在这里](https://github.com/Anon8281/PlaceholderAPI/releases/tag/1.1))
+* [**Vault**](https://www.spigotmc.org/resources/vault.34315/) <mark style="color:yellow;">**推荐**</mark> (Folia 版本 [在这里](https://github.com/Geolykt/Vault/releases))
+* [**zMenu+**](configurations/patterns.md) <mark style="color:yellow;">**推荐**</mark>
 
 {% hint style="warning" %}
-**Attention:** Modded server software is not supported!
+**注意:** 不支持修改后的服务器软件！
 {% endhint %}
 
-## Installation
+## 安装步骤
 
-1. Download zMenu
-2. Add **jars files** in `/plugins/` folder.
-3. Start your server, and voila the plugin is ready to be used!
+1. 下载 zMenu。
+2. 将 **jar 文件**添加到 `/plugins/` 文件夹中。
+3. 启动服务器，插件即可使用！

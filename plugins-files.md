@@ -1,8 +1,8 @@
 ---
-description: The plugin's configuration files
+description: 插件的配置文件
 ---
 
-# 🗃️ Plugin's files
+# 🗃️ 插件配置
 
 ### Config.json
 
@@ -199,7 +199,7 @@ messages:
 
 ```
 
-## Inventories
+## 菜单配置
 
 ### Basic\_Inventory.yml
 
@@ -888,7 +888,7 @@ items:
 
 ```
 
-## Commands
+## 指令配置
 
 ### Commands.yml
 
@@ -1017,7 +1017,7 @@ commands:
               - "&7You will put a punishment to the player &f&n%target%&r &7with the reason&8: &f%reason%"
 ```
 
-## Patterns
+## 模板配置
 
 ### Pattern\_example
 

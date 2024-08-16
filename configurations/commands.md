@@ -2,12 +2,12 @@
 icon: square-terminal
 ---
 
-# Commands
+# 指令
 
-## Informations
+## 信息
 
-The plugin has an `commands` folder that will contain all your commands. You can create an infinite number of commands. A command will contain the name of the command, its aliases, its permission and the name of the inventory to open.\
-You can put several commands per file and create an unlimited number of files.
+插件包含一个 `commands` 文件夹，用于存放所有命令。你可以创建无限数量的命令。每个命令包括命令名称、别名、权限和要打开的菜单名称。\
+你可以在一个文件中放置多个命令，并创建无限数量的文件。
 
 ```
 |- commands
@@ -18,7 +18,7 @@ You can put several commands per file and create an unlimited number of files.
   - commands.yml
 ```
 
-## Syntax
+## 语法
 
 ```yaml
 commands:
@@ -38,14 +38,14 @@ commands:
     command: openbook
     actions:
       - type: book
-        author: "Maxlego08" # Book author
-        title: "&cTest" # Book title
-        lines: # Book pages
-          1: # First page
+        author: "Maxlego08" # 书作者
+        title: "&cTest" # 书标题
+        lines: # 书页
+          1: # 第一页
             - '     #34ebe8zMenu'
             - ''
             - ''
-            - '<hover:show_text:"#34eba8Open an url !"><click:open_url:"https://minecraft-inventory-builder.com/">#f0af24Open URL<reset>'
+            - '<hover:show_text:"#34eba8打开一个网址！"><click:open_url:"https://minecraft-inventory-builder.com/">#f0af24打开网址<reset>'
   punish:
     command: punish
     permission: "admin.punish"
@@ -63,22 +63,22 @@ commands:
         actions:
           - type: message
             messages:
-              - "&7You will put a punishment to the player &f&n%target%&r &7with the reason&8: &f%reason%"            
+              - "&7你将对玩家 &f&n%target%&r &7施加惩罚，原因&8: &f%reason%"            
 ```
 
 ***
 
-### Command
+### 命令
 
 ```yaml
 command: <command>
 ```
 
-Main command
+主命令
 
 ***
 
-### Aliases
+### 别名
 
 ```yaml
 aliases:
@@ -87,40 +87,40 @@ aliases:
   - ...
 ```
 
-The aliases of the command.
+命令的别名。
 
 ***
 
-### Action
+### 操作
 
 ```yaml
 actions:
   - ...  
 ```
 
-You can use [actions](buttons/actions.md) that will always be performed when executing the order.
+你可以使用 [操作](buttons/actions.md) 来执行命令时总是执行的动作。
 
 ***
 
-### Permission
+### 权限
 
 ```yaml
 permission: <permission>
 ```
 
-The permission the player must have to open the inventory.
+玩家必须具备的权限才能打开菜单。
 
 ***
 
-### Inventory
+### 菜单
 
 ```yaml
 inventory: <inventory name>
 ```
 
-Name of the inventory that will be opened.
+要打开的菜单名称。
 
-You can also specify the name of the plugin this way:
+你也可以通过以下方式指定插件名称：
 
 ```yaml
 inventory: "<plugin name>:<inventory name>"
@@ -128,7 +128,7 @@ inventory: "<plugin name>:<inventory name>"
 
 ***
 
-### Arguments
+### 参数
 
 ```yaml
 arguments:
@@ -137,9 +137,9 @@ arguments:
   - ...
 ```
 
-Allows you to add arguments to your commands. You can use the arguments with the following placeholder: `%zmenu_argument_<argument name>%`&#x20;
+允许你向命令添加参数。你可以使用以下占位符来引用参数：`%zmenu_argument_<argument name>%`&#x20;
 
-#### Example
+#### 示例
 
 ```yaml
 commands:
@@ -160,27 +160,27 @@ commands:
         actions:
           - type: message
             messages:
-              - "&7You will put a punishment to the player &f&n%target%&r &7with the reason&8: &f%reason%"
+              - "&7你将对玩家 &f&n%target%&r &7施加惩罚，原因&8: &f%reason%"
 ```
 
-You can define an [action](buttons/actions.md) and auto-completion list for each action.
+你可以为每个操作定义一个 [操作](buttons/actions.md) 和自动补全列表。
 
-You can define whether an argument and required or not with the value `isRequired`, I’ll show you that in the example below.
+你可以通过 `isRequired` 值来定义参数是否为必需。以下是一个示例。
 
-You can not execute the actions of the main command with the value `performMainAction`
+你不能通过 `performMainAction` 值执行主命令的操作。
 
-Here you have the command **`/punish <target> <reason`**> . So you can run the command this way: `/punish Maxlego08 Cheat (fly)`.
+你可以运行 **`/punish <target> <reason>`** 命令。例如：`/punish Maxlego08 Cheat (fly)`。
 
-With the placeholders you will be able to retrieve the arguments:
+通过占位符，你可以检索参数：
 
-| Placeholder               | Result        |
-| ------------------------- | ------------- |
-| `%zmenu_argument_target%` | `Maxlego08`   |
+| 占位符                   | 结果        |
+| ------------------------ | ----------- |
+| `%zmenu_argument_target%` | `Maxlego08` |
 | `%zmenu_argument_reason%` | `Cheat (fly)` |
 
-You can define whether the argument is optional and whether the argument has a specific inventory.
+你可以定义参数是否为可选项，以及参数是否具有特定菜单。
 
-#### Example with no required argument:
+#### 示例（无必需参数）:
 
 ```yaml
 commands:
@@ -191,8 +191,8 @@ commands:
     inventory: warp
     arguments:
       - name: warp
-        isRequired: false # Set the argument as optional
-        performMainAction: false # Does not open inventory
+        isRequired: false # 设置参数为可选
+        performMainAction: false # 不打开菜单
         auto-completion:
           - minapvp
           - cajas
@@ -208,4 +208,4 @@ commands:
               - "essentials:warp %zmenu_argument_warp% %player%"
 ```
 
-This example opens a warp inventory, then with an argument to teleport the player to the desired warp using an aliase of essentials.
+这个示例打开一个传送点菜单，然后使用参数将玩家传送到所需的传送点，使用了 essentials 的别名。

@@ -1,14 +1,10 @@
----
-description: All information on inventories.
----
+# 👨‍💻 菜单
 
-# 👨‍💻 Inventories
+## 信息
 
-## Informations
+该插件包括一个 `inventories` 文件夹，用于存储所有的菜单。每个菜单由一个单独的文件表示。你可以创建任意数量的菜单，也可以创建子文件夹来组织它们。
 
-The plugin includes an `inventories` folder that will contain all your inventories. Each inventory is represented by a separate file. You can create as many inventories as you want, as well as subfolders to organize them.
-
-In the default configuration, you have the following:
+在默认配置中，你会看到如下结构：
 
 ```
 |- inventories
@@ -23,42 +19,42 @@ In the default configuration, you have the following:
 
 ***
 
-## Syntax
+## 语法
 
 ```yaml
-name: "<inventory name>"
-size: <inventory size>
-fillItem: <itemstack>
-updateInterval: <update interval>
+name: "<菜单名称>"
+size: <菜单大小>
+fillItem: <物品堆>
+updateInterval: <更新间隔>
 clearInventory: <true/false>
-items: <buttons>
-open_requirement: <requirement>
+items: <按钮>
+open_requirement: <要求>
 ```
 
 ***
 
-### Name
+### 名称
 
 ```yaml
-name: "<inventory name>"
+name: "<菜单名称>"
 ```
 
-The name of the inventory that will be displayed. Please note that, depending on your version, there may be a character limit. You can use colors and placeholders in the name.
+菜单的显示名称。请注意，根据你的版本，可能会有字符限制。你可以在名称中使用颜色和占位符。
 
-If your inventory has multiple pages, you can display the current page and the last page using the following placeholders:
+如果你的菜单有多个页面，你可以使用以下占位符显示当前页面和最后页面：
 
-* `%page%` - Current page number
-* `%maxPage%` - Last page number
+* `%page%` - 当前页面号码
+* `%maxPage%` - 最后一页号码
 
 ***
 
-### Size
+### 大小
 
 ```yaml
-size: <inventory size>
+size: <菜单大小>
 ```
 
-Sets the inventory size. By default, the value will be 54. The size of the inventory must be a multiple of 9, ranging from **9** to **54**. The valid values are:
+设置菜单的大小。默认值为 54。菜单的大小必须是 9 的倍数，范围从 **9** 到 **54**。有效的值包括：
 
 * 9
 * 18
@@ -69,41 +65,41 @@ Sets the inventory size. By default, the value will be 54. The size of the inven
 
 ***
 
-### Fill Item
+### 填充物品
 
 ```yaml
-fillItem: <itemstack>
+fillItem: <物品堆>
 ```
 
-Allows you to fill all the slots with the same item stack. Refer to the [item information](items.md) for details.
+允许你用相同的物品堆填充所有槽位。详情请参见 [物品信息](items.md)。
 
 ***
 
-### Update Interval
+### 更新间隔
 
 ```yaml
-updateInterval: <update interval>
+updateInterval: <更新间隔>
 ```
 
-Allows you to define the refresh interval for the buttons in the inventory, in milliseconds. For the buttons to be updated, the update option must be enabled. For more information, see the details [here](buttons/#update).
+允许你定义菜单中按钮的刷新间隔（以毫秒为单位）。为了使按钮得到更新，必须启用更新选项。更多信息请参见 [这里](buttons/#update)。
 
 ***
 
-### Clear Inventory
+### 清空菜单
 
 ```yaml
 clearInventory: <true/false>
 ```
 
-Allows you to clear the player's inventory when opening and restore it upon closing. This feature enables you to display an image in the inventory without being obstructed by the player's items.
+允许你在打开时清空玩家的菜单，并在关闭时恢复。这项功能可以让你在菜单中显示图片而不被玩家的物品遮挡。
 
 ***
 
-### Matrix
+### 布局
 
-The matrix configuration in a YAML file allows for intuitive organization of items within a Minecraft inventory by providing a visual representation of slot arrangements. In the given example, a 54-slot inventory named `&8Test` uses a matrix of characters, where 'A' represents slots filled with diamonds, to create a bordered layout. This method enhances clarity and design efficiency, as each character in the matrix corresponds to an item defined under the `items` section, allowing for easy customization of inventory layouts.
+YAML 文件中的布局配置允许直观地组织 Minecraft 菜单中的物品，通过提供槽位排列的视觉表示。在示例中，一个名为 `&8Test` 的 54 槽菜单使用字符布局，其中 'A' 代表用钻石填充的槽位，创建了一个带边框的布局。这种方法提高了清晰度和设计效率，因为布局中的每个字符都对应 `items` 部分中定义的一个物品，从而简化了菜单布局的自定义。
 
-The use of a matrix simplifies the creation of complex inventory designs by visually mapping out item placements.
+使用布局简化了复杂菜单设计的创建，通过可视化映射物品放置位置来实现。
 
 ```yaml
 name: "&8Test"
@@ -123,117 +119,117 @@ items:
 
 ***
 
-### Items
+### 物品
 
 ```yaml
-items: <buttons>
+items: <按钮>
 ```
 
-**List of Buttons:** For detailed information, please refer [here](https://zmenu.groupez.dev/configurations/buttons).
+**按钮列表：** 详细信息请参见 [这里](https://zmenu.groupez.dev/configurations/buttons)。
 
 ***
 
-### OpenWithItem
+### 使用物品打开
 
-Opens the inventory through interaction with an item. You must define the item's details, the actions to be performed (full list [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/block/Action.html)), and the type of verification required.
+通过与物品的互动打开菜单。你必须定义物品的详细信息、要执行的操作（完整列表 [这里](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/block/Action.html)），以及所需的验证类型。
 
 ```yaml
-# Open this menu by clicking a specific item
-# You can use /zm giveopenitem <inventory> <player> to retrieve the item to use
+# 通过点击特定物品打开此菜单
+# 你可以使用 /zm giveopenitem <inventory> <player> 来获取使用的物品
 #
 openWithItem:
-  # Define the item that will be clicked
+  # 定义将被点击的物品
   item:
     material: compass
-    name: "&eOpen Basic Inventory"
+    name: "&e打开基础菜单"
     lore:
-      - "&7Click on me !"
-  # Look at https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/block/Action.html
+      - "&7点击我！"
+  # 查看 https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/block/Action.html
   actions:
     - RIGHT_CLICK_BLOCK
     - RIGHT_CLICK_AIR
-  # Define the type of verification.
-  # Depending on your configuration and need you will define a certain type of verification. Here are all the types that exist:
-  # - full -> Allows to check the itemStack in full, will use the ItemStack#isSimilar method.
-  # - material -> Allows to check only the material
-  # - name -> Allows to check only the display name
-  # - lore -> Allows to check only the lore
-  # - modelid -> Allows to check only the Custom Model Id
+  # 定义验证类型。
+  # 根据你的配置和需求，你将定义某种验证类型。以下是所有存在的类型：
+  # - full -> 允许完全检查 ItemStack，将使用 ItemStack#isSimilar 方法。
+  # - material -> 仅检查材料
+  # - name -> 仅检查显示名称
+  # - lore -> 仅检查 lore
+  # - modelid -> 仅检查自定义模型 ID
   type: full
 ```
 
 ***
 
-### Open Requirement
+### 打开要求
 
-More information [here](buttons/requirements.md#open-requirement).
+更多信息 [请点击这里](buttons/requirements.md#open-requirement)。
 
-## Translated Name
+## 翻译名称
 
-Allows you to translate the name of the player’s inventory.
+允许你翻译玩家菜单的名称。
 
 ```yaml
-# Inventory name (https://docs.zmenu.dev/configurations/inventories#name)
+# 菜单名称 (https://docs.zmenu.dev/configurations/inventories#name)
 #
-# This is the title of your inventory. You can put anything in it.
-# Color code and placeholders are supported.
-# If you are on Paper, Purpur or PufferFish you have access to the color code of MiniMessage (https://docs.advntr.dev/minimessage/format.html)
+# 这是你菜单的标题。你可以在其中放置任何内容。
+# 支持颜色代码和占位符。
+# 如果你使用的是 Paper、Purpur 或 PufferFish，你可以使用 MiniMessage 的颜色代码 (https://docs.advntr.dev/minimessage/format.html)
 #
-name: "&7Basics Inventory"
+name: "&7基础菜单"
 
-# Translate the inventory name into multiple languages
-# You must define the language and the country used
-# The vanilla Minecraft client will use lowercase language / country pairs separated by an underscore, but custom resource packs may use any format they wish.
+# 将菜单名称翻译成多种语言
+# 你必须定义所用的语言和国家
+# 原版 Minecraft 客户端将使用小写语言/国家对，以下划线分隔，但自定义资源包可以使用任何格式。
 translatedName:
-  - locale: "fr_fr" # Allows to define the language in French
+  - locale: "fr_fr" # 定义为法语
     name: "&aInventaire Basique"
-  - locale: "es_es" # Allows to define the language in Spanish
+  - locale: "es_es" # 定义为西班牙语
     name: "&aInventario Básico"
 ```
 
-## Patterns
+## 模板
 
-After creating your [patterns](patterns.md), you can add them to your inventory like this:
+创建了你的 [模板](patterns.md) 后，你可以像这样将它们添加到菜单中：
 
 ```yaml
 size: 54
 
-name: "&4Advanced &cInventory &7%page%&8/&7%maxPage%"
+name: "&4高级 &c菜单 &7%page%&8/&7%maxPage%"
 patterns:
   - "pattern_example"
 ```
 
-You must place the name of your file in the `patterns` folder. You can add as many patterns as you want.
+你必须将文件名放在 `patterns` 文件夹中。你可以添加任意数量的模板。
 
-Example from zAuctionHouseV3:
+来自 zAuctionHouseV3 的示例：
 
 ```yaml
-name: '&8ᴀᴜᴄᴛɪᴏɴ &8(&f%page%&8/&f%maxPage%&8)'  # Title of the menu, supports color codes and placeholders
+name: '&8ᴀᴜᴄᴛɪᴏɴ &8(&f%page%&8/&f%maxPage%&8)'  # 菜单标题，支持颜色代码和占位符
 
-size: 54  # Size of the Minecraft inventory menu, must be a multiple of 9
+size: 54  # Minecraft 菜单菜单的大小，必须是 9 的倍数
 
-patterns:  # List of pattern identifiers used in the menu
-  - "zauctionhouse_decoration"  # Pattern for decorative elements
-  - "zauctionhouse_pagination"  # Pattern for navigation between menu pages
-  - "zauctionhouse_auction"  # Pattern related to auction items or functionalities
+patterns:  # 菜单中使用的模板标识符列表
+  - "zauctionhouse_decoration"  # 装饰元素的模板
+  - "zauctionhouse_pagination"  # 菜单分页的模板
+  - "zauctionhouse_auction"  # 与拍卖项或功能相关的模板
 
 items:
   displayItems:
-    type: ZAUCTIONHOUSE_AUCTION  # Type of items to display, specific to auction house items
-    isPermanent: true  # Indicates these items will always be displayed and not dynamically updated
-    slots:  # Specifies the slots in the menu for the items
-      - 10-16  # Items occupy slots 10 through 16
-      - 19-25  # Items occupy slots 19 through 25
-      - 28-34  # Items occupy slots 28 through 34
-      - 37-43  # Items occupy slots 37 through 43
+    type: ZAUCTIONHOUSE_AUCTION  # 显示的项目类型，特定于拍卖行物品
+    isPermanent: true  # 指示这些项目将始终显示，不会动态更新
+    slots:  # 指定菜单中物品的槽位
+      - 10-16  # 项目占据 10 到 16 槽
+      - 19-25  # 项目占据 19 到 25 槽
+      - 28-34  # 项目占据 28 到 34 槽
+      - 37-43  # 项目占据 37 到 43 槽
     else:
       slots:
         - 22
       item:
         material: BARRIER
-        name: '&c&nNo Items Found'
+        name: '&c&n未找到物品'
 ```
 
-The auction inventory will use three patterns: one for decoration, one to manage pagination, and one to display the main buttons (such as purchased items, expired items, categories, etc.). The only button you need to define separately is the one that lists items for sale.
+拍卖菜单将使用三个模板：一个用于装饰，一个用于管理分页，一个用于显示主要按钮（如已购买的物品、过期物品、类别等）。你只需要单独定义列出待售物品的按钮。
 
-Using patterns allows you to reduce the size of the configuration and reuse it across multiple inventories.
+使用模板可以减少配置文件的大小，并在多个菜单中重复使用它们。

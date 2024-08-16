@@ -1,75 +1,73 @@
 ---
-description: >-
-  The requirements feature allows you to perform actions based on a permission
-  check.
+description: 条件功能允许你基于权限检查执行操作
 ---
 
-# 🏁 Requirements
+# 🏁 条件
 
-## Requirements
+## 条件
 
-### Syntax
+### 语法
 
 ```yaml
 # open_requirement
 # click_requirement
 view_requirement:
 
-  # Set the minimum number of requirements to be able to say this is a success.
-  # By default the value will be the same as the number of requirements.
+  # 设置需要满足的最低条件数量才能被视为成功。
+  # 默认值与条件数量相同。
   minimumRequirement: <number>
   
-  # List of requirements, all information about each type below
+  # 条件列表，下面是每种类型的所有信息
   requirements:
     - type: permission
       permission: "example.permission"
       deny:
         - type: message
           messages:
-            - "&cYou don't have permission !"
+            - "&c你没有权限！"
     - type: placeholder
-      placeholder: "%player_gamemode%" # need PAPI ecloud Player
+      placeholder: "%player_gamemode%" # 需要PAPI ecloud Player
       value: "CREATIVE"    
       action: equals_string
-      # Specific deny actions
+      # 特定拒绝操作
       deny:
         - type: message
           messages:
-            - "&cYou mus be in creative"      
+            - "&c你必须在创造模式下"      
     - type: regex
-      input: "%player_item_in_hand%" # need PAPI ecloud Player
+      input: "%player_item_in_hand%" # 需要PAPI ecloud Player
       regex: "(NETHERITE_|DIAMOND_|IRON_|GOLDEN_|STONE_|WOODEN_|LEATHER_|BOW|CROSSBOW|FISHING_ROD|SHEARS|SHIELD|TRIDENT|TURTLE_HELMET|ELYTRA|FLINT_AND_STEEL)"      
       deny:
         - type: message
           messages:
-            - "&cYou dont have items in your hand !"
+            - "&c你手中没有物品！"
   
-  # Global Success actions
+  # 全局成功操作
   success:
     - type: sound
       sound: ENTITY_PLAYER_LEVELUP
       
-  # Global Deny actions
+  # 全局拒绝操作
   deny:    
     - type: message
       messages:
-        - "&cYou doesn't have an item in your hand."
+        - "&c你手中没有物品。"
 ```
 
-In addition to global deny and success actions, you can define specific deny and success actions for each requirement.
+除了全局拒绝和成功操作外，你还可以为每个条件定义特定的拒绝和成功操作。
 
-### View Requirement
+### 查看条件
 
-Defines the requirements a player must meet to see a button in the inventory.
+定义玩家必须满足的要求才能在菜单中看到一个按钮。
 
-#### Example:
+#### 示例：
 
 ```yaml
 view_requirement:
   deny:
     - type: chat
       messages:
-        - "Hey, my name is %player%"
+        - "嘿，我的名字是 %player%"
   success:
     - type: sound
       sound: ENTITY_PLAYER_LEVELUP
@@ -82,11 +80,11 @@ view_requirement:
       action: equals_string
 ```
 
-### Open Requirement
+### 打开条件
 
-Defines the requirements a player must meet to open the inventory.
+定义玩家必须满足的要求才能打开菜单。
 
-#### Example
+#### 示例
 
 ```yaml
 open_requirement:
@@ -97,29 +95,29 @@ open_requirement:
   deny:
     - type: message
       messages:
-        - "&cYou doesn't have an item in your hand."
+        - "&c你手中没有物品。"
 ```
 
-In the example below, there is a check for the item in the player's hand. If the item matches the regex pattern, the player can open the inventory. Otherwise, they will receive a message, and the inventory will not open.
+在下面的示例中，检查玩家手中的物品。如果物品匹配正则表达式模式，玩家可以打开菜单。否则，他们会收到一条消息，菜单不会打开。
 
-### Click Requirement
+### 点击条件
 
-Defines multiple requirements for clicking the button. You need to specify several requirements and the corresponding clicks.
+定义多个条件以点击按钮。你需要指定几个条件和相应的点击操作。
 
-You can apply all clicks directly by using the following format:
+你可以使用以下格式直接应用所有点击：
 
 ```yaml
 clicks:
-  - ALL # or ANY
+  - ALL # 或者 ANY
 ```
 
-You can set the click type to `ALL` or `ANY` to apply the actions to all clicks. The list of clicks that will be included can be managed in the `config.json` file.
+你可以将点击类型设置为 `ALL` 或 `ANY` 来将操作应用于所有点击。点击列表可以在 `config.json` 文件中管理。
 
-#### Example:
+#### 示例：
 
 ```yaml
 click_requirement:
-  left_click: # You must put a name for your requirement, it will not be used.
+  left_click: # 你必须为你的条件指定一个名称，这个名称不会被使用。
     clicks:
       - LEFT
       - SHIFT_LEFT
@@ -136,8 +134,8 @@ click_requirement:
     success:
       - type: message
         messages:
-          - "&aLeft click !"
-  right_click: # You must put a name for your requirement, it will not be used.
+          - "&a左键点击！"
+  right_click: # 你必须为你的条件指定一个名称，这个名称不会被使用。
     clicks:
       - RIGHT
       - SHIFT_RIGHT
@@ -154,31 +152,31 @@ click_requirement:
     success:
       - type: message
         messages:
-          - "&aRight click !"
+          - "&a右键点击！"
 ```
 
-## Requirements type
+## 条件类型
 
-<table data-full-width="true"><thead><tr><th width="519">Permissible</th><th>Description</th></tr></thead><tbody><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: permission
+<table data-full-width="true"><thead><tr><th width="519">类型</th><th>描述</th></tr></thead><tbody><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: permission
   permission: &#x3C;permission>
-</code></pre></td><td>Checks if the player has the specified permission. To reverse the condition, add an exclamation mark <code>!</code> in front of the permission, like this: <code>!&#x3C;permission></code>.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: placeholder
+</code></pre></td><td>检查玩家是否具有指定的权限。要反转条件，请在权限前面添加感叹号 <code>!</code>，例如：<code>!&#x3C;permission></code>。</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: placeholder
   placeholder: &#x3C;placeholder>
   value: &#x3C;placeholder value>
   action: &#x3C;placeholder action>
   target: &#x3C;player / placeholder with player name>
-</code></pre></td><td><p>Allows you to define a permission using a placeholder. You must specify the placeholder, the action to be performed with the value, and the value that will be checked. For more information, click here.</p><p>You can specify a player; otherwise, the player who opens the inventory will be used by default.</p></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: regex
+</code></pre></td><td><p>允许使用占位符定义权限。你必须指定占位符、与值进行的操作以及要检查的值。有关更多信息，请点击此处。</p><p>你可以指定玩家；否则，将使用打开菜单的玩家作为默认值。</p></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: regex
   regex: &#x3C;regex>
   input: &#x3C;placeholder>
-</code></pre></td><td><p>Checks if the input matches the specified regex pattern. The input can be a placeholder.</p><p>Visit <a href="https://regexr.com">regexr.com</a> to create your regex pattern.</p></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: item
+</code></pre></td><td><p>检查输入是否匹配指定的正则表达式模式。输入可以是一个占位符。</p><p>访问 <a href="https://regexr.com">regexr.com</a> 来创建你的正则表达式模式。</p></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: item
   material: &#x3C;material>
   amount: &#x3C;amount of item>
-  modelId: &#x3C;model id> # default 0
-</code></pre></td><td>Checks if the player has a specific item in their inventory.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: job
+  modelId: &#x3C;model id> # 默认值为0
+</code></pre></td><td>检查玩家的菜单中是否有特定物品。</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: job
   job: &#x3C;job name>
-</code></pre></td><td>Allows to check if the player has the job. Works with <a href="https://www.spigotmc.org/resources/jobs-reborn.4216/">JobReborn</a> plugin.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: luckperm
+</code></pre></td><td>检查玩家是否拥有该职业。与 <a href="https://www.spigotmc.org/resources/jobs-reborn.4216/">JobReborn</a> 插件配合使用。</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: luckperm
   group: &#x3C;group name>
-</code></pre></td><td>Allows to check if the player is in a group. Works with <a href="https://www.spigotmc.org/resources/luckperms.28140/">LuckPerms</a> plugin.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: playername
+</code></pre></td><td>检查玩家是否在某个组中。与 <a href="https://www.spigotmc.org/resources/luckperms.28140/">LuckPerms</a> 插件配合使用。</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: playername
   playerName: &#x3C;placeholder>
-</code></pre></td><td>Allows to check if a placeholder returns a text that can be a player nickname.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: money
+</code></pre></td><td>检查占位符返回的文本是否可以是玩家昵称。</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: money
   amount: &#x3C;amount>
-</code></pre></td><td>Check if the player has enough money in their account. This only works with <a href="https://www.spigotmc.org/resources/vault.34315/">Vault</a>.</td></tr></tbody></table>
+</code></pre></td><td>检查玩家账户中是否有足够的钱。这仅与 <a href="https://www.spigotmc.org/resources/vault.34315/">Vault</a> 插件配合使用。</td></tr></tbody></table>

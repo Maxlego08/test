@@ -2,16 +2,16 @@
 icon: loader
 ---
 
-# Load Inventory
+# 加载菜单
 
-To load an inventory you have many methods present in the `InventoryManager` interface. But I advise you to use the `loadInventoryOrSaveResource` method. It allows you to retrieve the file in the resources of your plugin and save it.
+要加载菜单，你可以使用 `InventoryManager` 接口中的多种方法。但我建议你使用 `loadInventoryOrSaveResource` 方法。它允许你从插件的资源中检索文件并保存它。
 
 ```java
 try {
-    // Attempt to load or save a custom inventory configuration from a YAML file
+    // 尝试从 YAML 文件加载或保存自定义菜单配置
     this.inventoryManager.loadInventoryOrSaveResource(this.plugin, "inventories/paginate_inventory.yml");
 } catch (InventoryException exception) {
-    // Log any exceptions that occur during inventory loading
+    // 记录加载菜单过程中发生的任何异常
     exception.printStackTrace();
 }
 ```
