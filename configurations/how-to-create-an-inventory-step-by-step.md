@@ -1,7 +1,8 @@
 ---
-description: Let’s see how to create a new inventory step by step
+description: 创建一个新的菜单
+icon: warehouse
 ---
 
-# How to create an inventory step by step
+# 如何创建菜单
 
-Soon
+敬请期待

@@ -1,27 +1,27 @@
 ---
-description: Several examples of menu.
+description: 多个菜单示例
 ---
 
-# Example GUI menus
+# 🕍 示例 GUI 菜单
 
-## [Kit](https://github.com/Maxlego08/zMenuExample/blob/master/kits.yml)
+## [礼包](https://github.com/Maxlego08/zMenuExample/blob/master/kits.yml)
 
-An example of a gui converted from [DeluxeMenu](https://wiki.helpch.at/clips-plugins/deluxemenus/example-gui-menus#kits) to zMenu. The menu contains all the elements proposed by [DelexeMenu](https://wiki.helpch.at/clips-plugins/deluxemenus/example-gui-menus#kits).
+这是一个从 [DeluxeMenu](https://wiki.helpch.at/clips-plugins/deluxemenus/example-gui-menus#kits) 转换到 zMenu 的 GUI 示例。该菜单包含了 [DeluxeMenu](https://wiki.helpch.at/clips-plugins/deluxemenus/example-gui-menus#kits) 提供的所有元素。
 
-Here you have an example of a menu using placeholders to display a set of essentials. If the kit exists, and you have the permission, you will be able to retrieve the kit, then another item will show you the remaining time before retrieving the kit. Otherwise, an item will tell you that the kit does not exist.
+这里有一个使用占位符显示一组 Essentials 的菜单示例。如果这个礼包存在并且你有权限，你可以获取该礼包，然后另一个物品会显示你获取礼包前剩余的时间。否则，一个物品会告诉你该礼包不存在。
 
-You must install the following papi extensions:
+你需要安装以下 papi 扩展：
 
 > /papi ecloud download Essentials\
 > /papi reload
 
-## [Complexe action](https://github.com/Maxlego08/zMenuExample/blob/master/complex\_actions.yml)
+## [复杂操作](https://github.com/Maxlego08/zMenuExample/blob/master/complex\_actions.yml)
 
-An example of a gui converted from [DeluxeMenu](https://wiki.helpch.at/clips-plugins/deluxemenus/files#requirements-menu) to zMenu. The menu contains all the elements proposed by [DelexeMenu](https://wiki.helpch.at/clips-plugins/deluxemenus/files#requirements-menu).
+这是一个从 [DeluxeMenu](https://wiki.helpch.at/clips-plugins/deluxemenus/files#requirements-menu) 转换到 zMenu 的 GUI 示例。该菜单包含了 [DeluxeMenu](https://wiki.helpch.at/clips-plugins/deluxemenus/files#requirements-menu) 提供的所有元素。
 
-Here you have an example of a menu that will use a button of type `PERFORM_COMMAND` with [actions](configurations/buttons/#actions). You have an example of a shop that can be created with the plugin. To create a more complete and simple shop you have the [zShop](https://groupez.dev/resources/zshop.2) addon.
+这里有一个菜单示例，将使用类型为 `PERFORM_COMMAND` 的按钮，结合 [操作](configurations/buttons/#actions)。你可以看到使用该插件创建的商店示例。要创建一个更完整且简单的商店，你可以使用 [zShop](https://groupez.dev/resources/zshop.2) 插件扩展。
 
-You must install the following papi extensions:
+你需要安装以下 papi 扩展：
 
 > /papi ecloud download Vault\
 > /papi reload

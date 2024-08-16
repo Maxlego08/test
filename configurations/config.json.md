@@ -1,14 +1,14 @@
 ---
-description: Information about the values in the config.json file
+description: 关于 config.json 文件中值的信息
 ---
 
-# Config.json
+# 🦬 Config.json
 
 ```
 enableDebug: true/false
 ```
 
-Enable debug, allows you to display errors in the console that would normally be hidden.
+启用调试，允许你在控制台显示通常会被隐藏的错误信息。
 
 
 
@@ -16,7 +16,7 @@ Enable debug, allows you to display errors in the console that would normally be
 enableDebugTime: true/false
 ```
 
-Enable debug time, allows you to display the code execution time in nano second, perfect for testing the effectiveness of the plugin.
+启用调试时间，允许你显示代码执行时间（以纳秒为单位），适合测试插件的效果。
 
 
 
@@ -24,7 +24,7 @@ Enable debug time, allows you to display the code execution time in nano second,
 enableLogStorageFile: true/false
 ```
 
-Enable save or load file log in console
+启用日志存储文件，允许在控制台中保存或加载文件日志。
 
 
 
@@ -32,7 +32,7 @@ Enable save or load file log in console
 enableInformationMessage: true/false
 ```
 
-Enable information message, allows you to view messages that tell you about an inventory or that an order has been successfully loaded.
+启用信息消息，允许你查看有关菜单的消息或订单成功加载的消息。
 
 
 
@@ -40,7 +40,7 @@ Enable information message, allows you to view messages that tell you about an i
 enableOpenMessage: true/false
 ```
 
-Enable open message, default value for the command `/zm open <inventory name> <player> <display message>`
+启用打开消息，默认值用于命令 `/zm open <inventory name> <player> <display message>`。
 
 
 
@@ -48,7 +48,7 @@ Enable open message, default value for the command `/zm open <inventory name> <p
 enableMiniMessageFormat: true/false
 ```
 
-Enable mini message format, allows you to activate the mini message format, available from 1.17 onwards, more information here: [https://docs.advntr.dev/minimessage/index.html](https://docs.advntr.dev/minimessage/index.html)
+启用 mini 消息格式，允许你激活 mini 消息格式，该功能从 1.17 版本开始提供，更多信息请查看：[https://docs.advntr.dev/minimessage/index.html](https://docs.advntr.dev/minimessage/index.html)
 
 
 
@@ -56,7 +56,7 @@ Enable mini message format, allows you to activate the mini message format, avai
 enablePlayerCommandInChat: true/false
 ```
 
-Enable player command in chat, Allows you to ensure that when a player executes a command, they execute it from the chat and not from the console. If you have "fake" command, which are not saved in spigot you need to enable this option.
+启用聊天中的玩家命令，确保当玩家执行命令时，他们是在聊天中执行而不是在控制台中。如果你有“虚拟”命令，这些命令没有保存在 Spigot 中，你需要启用此选项。
 
 
 
@@ -64,7 +64,7 @@ Enable player command in chat, Allows you to ensure that when a player executes 
 secondsSavePlayerData: Int
 ```
 
-Seconds save player data: The time in seconds for automatic backup of player data.
+保存玩家数据的秒数：自动备份玩家数据的时间（以秒为单位）。
 
 
 
@@ -72,7 +72,7 @@ Seconds save player data: The time in seconds for automatic backup of player dat
 secondsSavePlayerInventories: Int
 ```
 
-Seconds save player data: The time in seconds for automatic backup of inventories data.
+保存玩家菜单的秒数：自动备份菜单数据的时间（以秒为单位）。
 
 
 
@@ -80,7 +80,7 @@ Seconds save player data: The time in seconds for automatic backup of inventorie
 autoSaveFileInventoryOnUpdate: true/false
 ```
 
-Auto save file inventory on update: allows you to save the file of jouueurs inventories automatically.
+更新时自动保存菜单文件：允许你在更新时自动保存玩家菜单的文件。
 
 
 
@@ -88,7 +88,7 @@ Auto save file inventory on update: allows you to save the file of jouueurs inve
 mainMenu: "example"
 ```
 
-Default menu name
+默认菜单名称。
 
 
 
@@ -96,7 +96,7 @@ Default menu name
 useSwapItemOffHandKeyToOpenMainMenu: true
 ```
 
-Open main menu when f key is press
+按下 f 键时打开主菜单。
 
 
 
@@ -104,7 +104,7 @@ Open main menu when f key is press
 useSwapItemOffHandKeyToOpenMainMenuNeedsShift: true
 ```
 
-Open main menu when swap item offhand key is press and sneak key
+按下交换副手物品的键和蹲下键时打开主菜单。
 
 
 
@@ -114,7 +114,7 @@ specifyPathMenus: [
 ]
 ```
 
-Load specific inventories
+加载特定的菜单。
 
 
 
@@ -122,4 +122,4 @@ Load specific inventories
 generateDefaultFile: true/false
 ```
 
-Generate default configuration
+生成默认配置文件。
