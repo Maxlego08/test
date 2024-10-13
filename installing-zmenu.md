@@ -15,7 +15,7 @@ To access additional functionality and support the project, consider purchasing 
 
 * **Java version**: 8 or newer
 * **Server version**: **1.8.8** to **1.21.1**
-* **Server SoftWare**: <mark style="color:orange;">Spigot</mark>, <mark style="color:green;">Paper</mark>, <mark style="color:green;">Folia</mark>, <mark style="color:green;">Pufferfish</mark>, <mark style="color:green;">Purpur</mark>, <mark style="color:green;">UniversSpigot</mark> _(all forks based on paper will work)_
+* **Server SoftWare**: <mark style="color:orange;">Spigot</mark>, <mark style="color:green;">Paper</mark>, <mark style="color:green;">Folia</mark> _(all forks based on paper will work)_
 * [**PlaceholderAPI**](https://www.spigotmc.org/resources/placeholderapi.6245/) <mark style="color:yellow;">**RECOMMANDED**</mark> (Folia version [here](https://github.com/Anon8281/PlaceholderAPI/releases/tag/1.1))
 * [**Vault**](https://www.spigotmc.org/resources/vault.34315/) <mark style="color:yellow;">**RECOMMANDED**</mark> (Folia version [here](https://github.com/Geolykt/Vault/releases))
 * [**zMenu+**](configurations/patterns.md) <mark style="color:yellow;">**RECOMMANDED**</mark>
