@@ -6,9 +6,11 @@ description: All information on inventories.
 
 ## Informations
 
-The plugin includes an `inventories` folder that will contain all your inventories. Each inventory is represented by a separate file. You can create as many inventories as you want, as well as subfolders to organize them.
+## Overview
 
-In the default configuration, you have the following:
+The plugin includes an `inventories` folder that will contain all your inventories. Each inventory is represented by a separate file, allowing you to create as many inventories as needed, and you can organize them into subfolders.
+
+In the default configuration, you have the following structure:
 
 ```
 |- inventories
@@ -43,10 +45,9 @@ open_requirement: <requirement>
 name: "<inventory name>"
 ```
 
-The name of the inventory that will be displayed. Please note that, depending on your version, there may be a character limit. You can use colors and placeholders in the name.
+The name of the inventory that will be displayed in-game. You can use colors (`&<code>`) to format the text and placeholders (`%placeholder%`) to dynamically insert values, such as player names or other variables. Keep in mind that some server versions may impose a character limit on inventory titles.
 
-If your inventory has multiple pages, you can display the current page and the last page using the following placeholders:
-
+If your inventory has multiple pages, use these placeholders:
 * `%page%` - Current page number
 * `%maxPage%` - Last page number
 
@@ -58,14 +59,14 @@ If your inventory has multiple pages, you can display the current page and the l
 size: <inventory size>
 ```
 
-Sets the inventory size. By default, the value will be 54. The size of the inventory must be a multiple of 9, ranging from **9** to **54**. The valid values are:
+Defines the number of slots in the inventory. The size must be a multiple of 9, as Minecraft inventories are organized in rows of 9 slots. The inventory size can range from **9** to **54**, which translates to 1 to 6 rows. The valid options are:
 
-* 9
-* 18
-* 27
-* 36
-* 45
-* 54
+* 9 (1 row)
+* 18 (2 rows)
+* 27 (3 rows)
+* 36 (4 rows)
+* 45 (5 rows)
+* 54 (6 rows)
 
 ***
 
@@ -75,7 +76,7 @@ Sets the inventory size. By default, the value will be 54. The size of the inven
 fillItem: <itemstack>
 ```
 
-Allows you to fill all the slots with the same item stack. Refer to the [item information](items.md) for details.
+This option allows you to fill all empty inventory slots with a specific item stack. This is useful for creating a consistent visual layout or preventing empty slots from being displayed. Refer to the [item information](items.md) for more details on how to define item stacks.
 
 ***
 
@@ -85,7 +86,7 @@ Allows you to fill all the slots with the same item stack. Refer to the [item in
 updateInterval: <update interval>
 ```
 
-Allows you to define the refresh interval for the buttons in the inventory, in milliseconds. For the buttons to be updated, the update option must be enabled. For more information, see the details [here](buttons/#update).
+Specifies how often the buttons in the inventory should be refreshed, in milliseconds. This is useful for dynamic inventories that need to update their content regularly, such as displaying live player stats. Note that for buttons to be updated, they must have the update option enabled. More details can be found [here](buttons/#update).
 
 ***
 
@@ -95,16 +96,15 @@ Allows you to define the refresh interval for the buttons in the inventory, in m
 clearInventory: <true/false>
 ```
 
-Allows you to clear the player's inventory when opening and restore it upon closing. This feature enables you to display an image in the inventory without being obstructed by the player's items.
+When set to true, this option clears the player's inventory upon opening the custom inventory and restores it when closing. This is particularly useful for displaying an unobstructed view or image within the inventory without any interference from the player's items.
 
 ***
 
 ### Matrix
 
-The matrix configuration in a YAML file allows for intuitive organization of items within a Minecraft inventory by providing a visual representation of slot arrangements. In the given example, a 54-slot inventory named `&8Test` uses a matrix of characters, where 'A' represents slots filled with diamonds, to create a bordered layout. This method enhances clarity and design efficiency, as each character in the matrix corresponds to an item defined under the `items` section, allowing for easy customization of inventory layouts.
+The matrix configuration helps organize items visually in an inventory by representing slot arrangements using characters. Each character in the matrix corresponds to an item defined in the items section, making it easier to create complex layouts.
 
-The use of a matrix simplifies the creation of complex inventory designs by visually mapping out item placements.
-
+In the example below, the inventory is named `&8Test` and has a size of 54 slots. The **matrix** defines the arrangement of items in the inventory, where the character `A` represents slots filled with diamonds. This creates a bordered layout with diamonds. The **items** section maps the character `A` to a diamond item, making the configuration more intuitive and simplifying the creation of visually structured inventories.
 ```yaml
 name: "&8Test"
 size: 54
@@ -129,7 +129,7 @@ items:
 items: <buttons>
 ```
 
-**List of Buttons:** For detailed information, please refer [here](https://zmenu.groupez.dev/configurations/buttons).
+Defines the buttons or items that will be placed in the inventory. Each button can be configured to perform specific actions, such as executing commands or opening other inventories. For detailed information on configuring buttons, please refer to the [button configuration guide](https://zmenu.groupez.dev/configurations/buttons).
 
 ***
 
@@ -166,11 +166,11 @@ openWithItem:
 
 ### Open Requirement
 
-More information [here](buttons/requirements.md#open-requirement).
+For more information, refer to the [here](buttons/requirements.md#open-requirement).
 
 ## Translated Name
 
-Allows you to translate the name of the player’s inventory.
+Allows you to translate the inventory name into multiple languages.
 
 ```yaml
 # Inventory name (https://docs.zmenu.dev/configurations/inventories#name)
@@ -193,7 +193,7 @@ translatedName:
 
 ## Patterns
 
-After creating your [patterns](patterns.md), you can add them to your inventory like this:
+After creating your [patterns](patterns.md), add them to your inventory like this:
 
 ```yaml
 size: 54
@@ -233,7 +233,4 @@ items:
         material: BARRIER
         name: '&c&nNo Items Found'
 ```
-
-The auction inventory will use three patterns: one for decoration, one to manage pagination, and one to display the main buttons (such as purchased items, expired items, categories, etc.). The only button you need to define separately is the one that lists items for sale.
-
-Using patterns allows you to reduce the size of the configuration and reuse it across multiple inventories.
+Using patterns helps reduce the complexity and size of individual inventory configurations by allowing you to define reusable layouts or elements. This is particularly useful for maintaining consistency across multiple inventories and making future adjustments easier.
