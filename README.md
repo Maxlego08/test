@@ -24,7 +24,7 @@ zMenus also includes an advanced API for developers, making it easy to integrate
 - **[PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) Support**: Integrate placeholders to make your menus dynamic.
 - **[MiniMessage Format](https://docs.adventure.kyori.net/minimessage/format.html) Support**: Use Kyori Adventure's MiniMessage to format text in inventories.
 - **[Folia](https://papermc.io/software/folia) Support**: Compatibility with Folia.
-- **Convert from Other Plugins**: Seamlessly convert existing inventories from plugins like DeluxeMenu.
+- **Automatic Compatibility with DeluxeMenus**: Directly compatible with existing DeluxeMenu configurations, no conversion needed.
 - **Configuration Patterns**: Simplify repetitive configurations using patterns.
 - **Anti-Duplication System**: Prevent item duplication and ensure a fair gameplay experience.
 - **Multi-Language Support**: Translate items into multiple languages, with zMenus displaying the correct translation to each player automatically.
