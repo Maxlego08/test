@@ -1,36 +1,30 @@
----
-description: A complete plugin for GUI menu with an advanced API.
----
+# 🍾 Getting Started with zMenus
 
-# 🍾 Getting started
+## What is zMenus?
 
-## Description
+zMenus is a powerful inventory management plugin for Minecraft servers, offering complete customization over in-game inventories. With zMenus, you can create custom inventories and link them to specific commands, giving you full control over the player experience.
 
-zMenus is a comprehensive inventory plugin.
+The plugin uses a flexible button system, allowing you to configure every aspect of your inventories to suit your needs. You can create and organize each inventory in its own file, and group related inventories into folders for better organization.
 
-You can create custom inventories and link them to custom commands. With the button system, you can fully customize your inventories to the highest degree.
+zMenus also includes an advanced API for developers, making it easy to integrate with other plugins using the same inventory system. This means you can link inventories across multiple plugins seamlessly, enhancing the overall server experience.
 
-Each inventory needs to be created in its own file, and you can organize these files into folders.
+[Download zMenus from SpigotMC](https://www.spigotmc.org/resources/zmenu.110402/).
 
-The plugin also features an advanced API that allows other developers to use the same inventory configuration system. You can seamlessly link inventories from multiple plugins without any issues. The goal of this API is to provide a uniform configuration for a better user experience.
+## Key Features
 
-Download here: [https://www.spigotmc.org/resources/zmenu.110402/](https://www.spigotmc.org/resources/zmenu.110402/)
-
-## Features
-
-* Ability to create an infinite number of GUI Menu and commands.
-* Possibility to create several pages in the same inventory.
-* Arguments for your commands.
-* A marketplace to download configurations (WIP)
-* An online inventory editor (WIP)
-* Open Source: [https://github.com/Maxlego08/zMenu](https://github.com/Maxlego08/zMenu).
-* Advanced API.
-* Ability to create an infinite number of buttons for each of your actions.
-* Highly customizable.
-* [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) support.
-* Kyori Adventure [Mini Message Format](https://docs.adventure.kyori.net/minimessage/format.html) support.
-* [Folia](https://papermc.io/software/folia) support.
-* Convert from other plugins (DeluxeMenu)
-* Patterns, finished copying pasted several times the same configuration
-* Anti duplication system. With the plugin the duplication will be completely impossible.
-* Possibility to translate your items in several languages, the plugin is responsible for displaying the right translation to the player !
+- **Unlimited Custom GUIs and Commands**: Create as many inventory menus and commands as you need.
+- **Multi-Page Inventories**: Easily create multi-page inventories for better user navigation.
+- **Command Arguments**: Add arguments to your commands for more customization.
+- **Marketplace for Configurations**: (Coming Soon) Download pre-made configurations from the marketplace.
+- **Online Inventory Editor**: (Coming Soon) Edit inventories online for convenience.
+- **Open Source**: [Check out the source code on GitHub](https://github.com/Maxlego08/zMenu).
+- **Advanced API for Developers**: Use the API to integrate zMenus with other plugins effortlessly.
+- **Unlimited Buttons for Actions**: Add as many buttons as you need for each inventory action.
+- **Highly Customizable**: Fully adapt the plugin to fit your server's needs.
+- **[PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) Support**: Integrate placeholders to make your menus dynamic.
+- **[MiniMessage Format](https://docs.adventure.kyori.net/minimessage/format.html) Support**: Use Kyori Adventure's MiniMessage to format text in inventories.
+- **[Folia](https://papermc.io/software/folia) Support**: Compatibility with Folia.
+- **Convert from Other Plugins**: Seamlessly convert existing inventories from plugins like DeluxeMenu.
+- **Configuration Patterns**: Simplify repetitive configurations using patterns.
+- **Anti-Duplication System**: Prevent item duplication and ensure a fair gameplay experience.
+- **Multi-Language Support**: Translate items into multiple languages, with zMenus displaying the correct translation to each player automatically.
