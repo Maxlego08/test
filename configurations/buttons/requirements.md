@@ -181,4 +181,7 @@ click_requirement:
   playerName: &#x3C;placeholder>
 </code></pre></td><td>Allows to check if a placeholder returns a text that can be a player nickname.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: money
   amount: &#x3C;amount>
-</code></pre></td><td>Check if the player has enough money in their account. This only works with <a href="https://www.spigotmc.org/resources/vault.34315/">Vault</a>.</td></tr></tbody></table>
+  currency: &#x3C;currency name>
+  economy: &#x3C;economy name> # Only the zEssentials, CoinsEngine and EcoBits plugins need this
+  
+</code></pre></td><td>Check if the player has enough money in their account. This only works with <a href="https://www.spigotmc.org/resources/beasttokens-custom-currency.20806/">BeastTokens</a>, <a href="https://www.spigotmc.org/resources/34315/">Vault</a>, <a href="https://www.spigotmc.org/resources/80745/">PlayerPoints</a>, <a href="https://builtbybit.com/resources/16707/">ElementalTokens</a>, <a href="https://builtbybit.com/resources/14920/">ElementalGems</a>, <a href="https://www.minecraft.net/">Level</a>, <a href="https://www.minecraft.net/">Experience</a>, <a href="https://www.spigotmc.org/resources/118014/"><strong>zEssentials</strong></a>, <a href="https://www.spigotmc.org/resources/109967/">EcoBits</a>, <a href="https://www.spigotmc.org/resources/84121/">CoinsEngine</a> and <a href="https://www.spigotmc.org/resources/15358/">VotingPlugin</a>.<br>CurrenciesAPI : <a href="https://github.com/Traqueur-dev/CurrenciesAPI">https://github.com/Traqueur-dev/CurrenciesAPI</a></td></tr></tbody></table>
