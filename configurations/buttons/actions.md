@@ -102,5 +102,12 @@ success_actions:
   amount: &#x3C;amount>
   currency: &#x3C;currency name>
   economy: &#x3C;economy name> # Only the zEssentials, CoinsEngine and EcoBits plugins need this
-</code></pre></td><td>Allows you to deposit money from the player’s account. Works with the <a href="https://www.spigotmc.org/resources/beasttokens-custom-currency.20806/">BeastTokens</a>, <a href="https://www.spigotmc.org/resources/34315/">Vault</a>, <a href="https://www.spigotmc.org/resources/80745/">PlayerPoints</a>, <a href="https://builtbybit.com/resources/16707/">ElementalTokens</a>, <a href="https://builtbybit.com/resources/14920/">ElementalGems</a>, <a href="https://www.minecraft.net/">Level</a>, <a href="https://www.minecraft.net/">Experience</a>, <a href="https://www.spigotmc.org/resources/118014/"><strong>zEssentials</strong></a>, <a href="https://www.spigotmc.org/resources/109967/">EcoBits</a>, <a href="https://www.spigotmc.org/resources/84121/">CoinsEngine</a> and <a href="https://www.spigotmc.org/resources/15358/">VotingPlugin</a>.<br>CurrenciesAPI : <a href="https://github.com/Traqueur-dev/CurrenciesAPI">https://github.com/Traqueur-dev/CurrenciesAPI</a></td></tr></tbody></table>
+</code></pre></td><td>Allows you to deposit money from the player’s account. Works with the <a href="https://www.spigotmc.org/resources/beasttokens-custom-currency.20806/">BeastTokens</a>, <a href="https://www.spigotmc.org/resources/34315/">Vault</a>, <a href="https://www.spigotmc.org/resources/80745/">PlayerPoints</a>, <a href="https://builtbybit.com/resources/16707/">ElementalTokens</a>, <a href="https://builtbybit.com/resources/14920/">ElementalGems</a>, <a href="https://www.minecraft.net/">Level</a>, <a href="https://www.minecraft.net/">Experience</a>, <a href="https://www.spigotmc.org/resources/118014/"><strong>zEssentials</strong></a>, <a href="https://www.spigotmc.org/resources/109967/">EcoBits</a>, <a href="https://www.spigotmc.org/resources/84121/">CoinsEngine</a> and <a href="https://www.spigotmc.org/resources/15358/">VotingPlugin</a>.<br>CurrenciesAPI : <a href="https://github.com/Traqueur-dev/CurrenciesAPI">https://github.com/Traqueur-dev/CurrenciesAPI</a></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: title
+  title: &#x3C;title>
+  subtitle: &#x3C;sub title>
+  start: &#x3C;start in milliseconds>
+  duration: &#x3C;duration in milliseconds>
+  end: &#x3C;end in milliseconds>
+  
+</code></pre></td><td>Send a title</td></tr></tbody></table>
 
