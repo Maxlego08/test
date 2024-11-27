@@ -325,7 +325,7 @@ max-stack-size: 2
 Overrides the default maximum stack size of this item. Choose a number between 1 and 99. max-stack-size must be 1 if max-damage is set.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Max Damage
@@ -337,7 +337,7 @@ max-damage: 2567
 Controls the maximum amount of damage an item can take. If not present, the item cannot be damaged. For this to work, you need to make this item a tool if it is not already and then set it's initial damage (usually 0). max-stack-size must be 1 if max-damage is set.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Damage
@@ -349,7 +349,7 @@ damage: 20
 The absolute amount of damage or use this item has taken.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Repair Cost
@@ -361,7 +361,7 @@ repair-cost: 10
 Number of enchantment levels to add to the base level cost when repairing, combining, or renaming this item with an Anvil.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Unbreakable
@@ -373,7 +373,7 @@ unbreakable: false
 Tools, armor and weapons set with this won't lose durability when used.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Unbreakable Show In Tooltip
@@ -385,7 +385,7 @@ unbreakable-show-in-tooltip: false
 If false, an 'Unbreakable' line will not be included in the tooltip. Default is True.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Fire Resistant
@@ -397,7 +397,7 @@ fire-resistant: false
 If true, this item will not burn in fire
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Item Rarity
@@ -414,7 +414,7 @@ Determines the default color of its name. This enum is ordered from least rare t
 * `UNCOMMON` - Yellow item name.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Hide Tooltip
@@ -426,7 +426,7 @@ hide-tooltip: false
 If present, it will completely hide whole item tooltip (that includes item name). The tooltip will be still visible and searchable in creative mode.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Hide additional tooltip
@@ -438,7 +438,7 @@ hide-additional-tooltip: false
 If true, disables 'additional' tooltip part which comes from the item type.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Enchantment Glint
@@ -450,7 +450,7 @@ enchantment-glint: false
 If true, the item will glint, even without enchantments; if false, the item will not glint, even with enchantments. If null, the override will be cleared.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Enchantment Show In Tooltip
@@ -462,7 +462,7 @@ enchantment-show-in-tooltip: true
 If false, no enchantments will be shown in the item tooltip. Default is true.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Attribute Show In Tooltip
@@ -474,7 +474,7 @@ attribute-show-in-tooltip: true
 If false. The attributes will not show on the item tooltip. Default is true.
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
 
 ## Trim
@@ -492,5 +492,5 @@ trim:
 Allows to define an armor trim, only usable on armor
 
 {% hint style="danger" %}
-Only available for 1.21 and below
+Only available for 1.21 and above
 {% endhint %}
