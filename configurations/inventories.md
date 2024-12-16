@@ -48,6 +48,7 @@ name: "<inventory name>"
 The name of the inventory that will be displayed in-game. You can use colors (`&<code>`) to format the text and placeholders (`%placeholder%`) to dynamically insert values, such as player names or other variables. Keep in mind that some server versions may impose a character limit on inventory titles.
 
 If your inventory has multiple pages, use these placeholders:
+
 * `%page%` - Current page number
 * `%maxPage%` - Last page number
 
@@ -67,6 +68,14 @@ Defines the number of slots in the inventory. The size must be a multiple of 9, 
 * 36 (4 rows)
 * 45 (5 rows)
 * 54 (6 rows)
+
+### Type
+
+```yaml
+type: CHEST
+```
+
+Allows to modify the [inventory type](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html) attention you can not put CRAFTING and PLAYER.
 
 ***
 
@@ -105,6 +114,7 @@ When set to true, this option clears the player's inventory upon opening the cus
 The matrix configuration helps organize items visually in an inventory by representing slot arrangements using characters. Each character in the matrix corresponds to an item defined in the items section, making it easier to create complex layouts.
 
 In the example below, the inventory is named `&8Test` and has a size of 54 slots. The **matrix** defines the arrangement of items in the inventory, where the character `A` represents slots filled with diamonds. This creates a bordered layout with diamonds. The **items** section maps the character `A` to a diamond item, making the configuration more intuitive and simplifying the creation of visually structured inventories.
+
 ```yaml
 name: "&8Test"
 size: 54
@@ -233,4 +243,5 @@ items:
         material: BARRIER
         name: '&c&nNo Items Found'
 ```
+
 Using patterns helps reduce the complexity and size of individual inventory configurations by allowing you to define reusable layouts or elements. This is particularly useful for maintaining consistency across multiple inventories and making future adjustments easier.
