@@ -186,7 +186,7 @@ pitch: 1.5
 volume: 0.5
 ```
 
-Allows you to play a sound for the player when they click. You must use the sounds available in [XSound](./). You can also adjust the pitch and volume of the sound.
+Allows you to play a sound for the player when they click. You must use the sounds available in [XSound.](https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/XSound.java) You can also adjust the pitch and volume of the sound.
 
 ***
 
